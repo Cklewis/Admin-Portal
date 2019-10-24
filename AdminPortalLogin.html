@@ -3,12 +3,17 @@
 <head>
 <title>Admin Portal</title>
 <script>
+
+    var makePath = function(form) {
+      form.action = document.getElementById('AdminRoleType').value;
+    };
+    
 function LoginRequirement()
 {
-  var username = document.forms["loginForm"]["Username"].value;
-  var password = document.forms["loginForm"]["Password"].value;
+  var username = document.forms["login"]["login"].value;
+  var password = document.forms["login"]["password"].value;
   
-  if (username == "" || password == "")
+  if (login == "" || password == "")
   {
     alert("One or more fields left blank");
     return false;
@@ -19,9 +24,18 @@ function LoginRequirement()
     alert("Please select an option!");
     return false;
   }
-  
+
+}     
+
+
+function makepath(){
+  var makePath = function(form) {
+    form.action = document.getElementById('AdminRoleType').value;
+  };
+
 }
 </script>
+
 
 <!-- 
 <style>
@@ -77,6 +91,9 @@ select
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
 
 <style>
 /* BASIC */
@@ -372,18 +389,18 @@ select
           <br>
           <h1 id="ap" style = "text-align:center; color:black; font-size:290%; font-family:Georgia">Admin Portal</h1>
           <!-- Login Form -->
-          <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-            <select type="text" id="AdminRoleType"  >
-                <option value="Select">Select</option>
-                <option value="Admin">Admin</option>
-                <option value="Finance Admin">Finance Admin</option>
-                <option value="Sales Admin">Sales Admin</option>
-                <option value="Human Resource Admin">Human Resource Admin</option>
-                <option value="Engineering Admin">Engineering Admin</option>
+          <form onsubmit='makePath(this);'>
+            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" required>
+            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" required>
+            <select type="text" id="AdminRoleType" required>
+                <option  selected disabled value="">Select</option> 
+                <option value= "Adminlink.html">Admin</option>
+                <option value="FinanceAdminLink.html">Finance Admin</option>
+                <option value="SalesAdmin.html">Sales Admin</option>
+                <option value="HumanResourceLink.html">Human Resource Admin</option>
+                <option value="EngineeringAdminLink.html">Engineering Admin</option>
                 </select>
-            <input type="submit"  onclick="return LoginRequirement()"class="fadeIn fourth" value="Log In" >
+            <input type="submit"id="subId" onclick="return LoginRequirement()"  class="fadeIn fourth" value="Log In"  >
           </form>
       
           <!-- Remind Passowrd -->
