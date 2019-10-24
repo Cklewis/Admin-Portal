@@ -172,7 +172,7 @@ h2.active {
 
 /* FORM TYPOGRAPHY*/
 
-input[type=button], input[type=submit], input[type=reset], select[type=text]  {
+input[type=button], input[type=submit], input[type=reset] {
   background-color: #56baed;
   border: none;
   color: white;
@@ -206,7 +206,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active {
   transform: scale(0.95);
 }
 
-input[type=text], select[type=text]{
+input[type=text], input[type=password], select[type=text]{
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -227,12 +227,12 @@ input[type=text], select[type=text]{
   border-radius: 5px 5px 5px 5px;
 }
 
-input[type=text]:focus, select[type=text]{
+input[type=text]:focus, input[type=password]:focus, select[type=text]:focus{
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]:placeholder,select[type=text] {
+input[type=text]:placeholder,input[type=password]:placeholder, select[type=text] {
   color: #cccccc;
 }
 
@@ -383,12 +383,12 @@ select
           <!-- Login Form -->
           <form onsubmit='makePath(this);'>
             <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" required>
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" required>
+            <input type="password" id="password" class="fadeIn third"  name="login" placeholder="password" required>
             <select type="text" id="AdminRoleType" required>
                 <option  selected disabled value="">Select</option> 
                 <option value= "Adminlink.html">Admin</option>
                 <option value="FinanceAdminLink.html">Finance Admin</option>
-                <option value="SalesAdmin.html">Sales Admin</option>
+                <option value="SalesAdminLink.html">Sales Admin</option>
                 <option value="HumanResourceLink.html">Human Resource Admin</option>
                 <option value="EngineeringAdminLink.html">Engineering Admin</option>
                 </select>
