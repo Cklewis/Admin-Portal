@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Page</title> 
+
+<script>
+
+function RegistrationRequirement()
+{
+  var firstname = document.forms["registerform"]["FirstName"].value;
+  var lastname = document.forms["registerform"]["LastName"].value;
+  var emailaddress = document.forms["registerform"]["EmailAddress"].value;
+  var username = document.forms["registerform"]["Username"].value;
+  var password = document.forms["registerform"]["Password"].value;
+  var confirmpassword = document.forms["registerform"]["ConfirmPassword"].value;
+
+  if (firstname == "" || lastname == "" || emailaddress == "" || username == "" || password == "" || confirmpassword == "")
+  {
+    alert("One or more fields left blank");
+    return false;
+  }
+  
+  if(username.length < 5)
+  {
+    alert("Username must be at least 5 characters long, Please Try Again");
+  }
+
+  if(username.length > 25)
+  {
+    alert("Username cannot exceed more than 25 characters, Please Try Again");
+  }
+
+  if(password.length <8 && confirmpassword.length < 8)
+  {
+    alert("Password must be at least 8 characters long, Please Try Again");
+  }
+  if(password.length > 25 && confirmpassword.length > 25)
+  {
+    alert("Password cannot exceed more than 25 characters, Please Try Again");
+  }
+  if (password!=confirmpassword)
+  {
+    alert("Passwords do not match");
+  }
+}
+
+</script>
+</head>
+
+<style>
+body
+{
+   background-color: rgb(141, 150, 18);
+}
+
+input[type=text], select {
+  width: 15%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=password], select {
+  width: 15%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=email], select {
+  width: 15%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input
+{
+  font-size: 25px;
+  
+}
+
+.button {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+select
+{
+    font-size: 25px;
+}
+</style>
+
+<body>
+<h1 align="center">Create New Account</h1>
+<form name ="registerform" action= "/action_page.php" target="_self">
+<p align="center" style="font-size:200%; color:black;">*First Name:<input type="text" name="FirstName" placeholder="*First Name" size="25"maxlength="100" /></p>
+<p align="center" style="font-size:200%; color:black;">*Last Name:<input type="text" name="LastName" placeholder="*Last Name" size="25"maxlength="100" /></p>
+<p align="center" style="font-size:200%; color:black;">*Email Address:<input type="email" name="EmailAddress" placeholder="*Email Address" size="25"maxlength="100" /></p>
+<p align="center" style="font-size:200%; color:black;">*Username:<input type="text" name="Username" placeholder="*Username" size="25"maxlength="30" /></p>
+<p align="center" style="font-size:200%; color:black;">*Password:<input type="password" name="Password" placeholder="*Password" size="25"maxlength="30" /></p>
+<p align="center" style="font-size:200%; color:black;">*Confirm Password:<input type="password" name="ConfirmPassword" placeholder="*Confirm Password" size="25"maxlength="30" /></p>
+<p align="center" style="font-size:200%; color:black;">*Admin Role Type
+<select name="Admin Role Type">
+<option value="Select">Select</option>
+<option value="Admin">Admin</option>
+<option value="Finance Admin">Finance Admin</option>
+<option value="Sales Admin">Sales Admin</option>
+<option value="Human Resource Admin">Human Resource Admin</option>
+<option value="Engineering Admin">Engineering Admin</option>
+</select>
+
+<p align="center" style="font-size:200%;"><input type="button" onclick="return RegistrationRequirement()" class="button" value="Sign Up" style="font-size:100%;"/></p>
+</p>
+
+<hr />
+
+<p align="left" style="font-size:200%; color:black;">*field must not be left blank</p> 
+
+<center><a href="AdminPortalLogin.html" style=font-size:200%;>Already have an account? Click here to be redirected to the sign in page</a></center>
+</form>
+</body>
+</html>

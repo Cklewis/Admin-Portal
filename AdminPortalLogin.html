@@ -28,58 +28,6 @@
 }  */
 </script>
 
-
-<!-- 
-<style>
-body
-{
-  background-color: rgb(141, 150, 18);
-}
-
-input[type=text], select {
-  width: 15%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=password], select {
-  width: 15%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input
-{
-  font-size: 25px;
-}
-
-.button {
-  background-color: blue;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-select
-{
-    font-size: 25px;
-}
-</style> -->
-
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -91,13 +39,13 @@ select
 /* BASIC */
 
 html {
-  background-color: #56baed;
+  background-color: rgb(141, 150, 18);
 }
 
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
-  background-color: #56baed;
+  background-color: rgb(141, 150, 18);
 }
 
 a {
@@ -153,6 +101,7 @@ h2 {
   text-align: center;
   -webkit-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
+  margin-top:-1.5em;
 }
 
 
@@ -173,7 +122,8 @@ h2.active {
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset] {
-  background-color: #56baed;
+  /*background-color: #56baed;*/
+  background-color: rgb(141, 150, 18);
   border: none;
   color: white;
   padding: 15px 80px;
@@ -195,7 +145,8 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
-  background-color: #39ace7;
+  /*background-color: #39ace7;*/
+  background-color: rgb(219, 38, 6);
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active {
@@ -229,7 +180,8 @@ input[type=text], input[type=password], select[type=text]{
 
 input[type=text]:focus, input[type=password]:focus, select[type=text]:focus{
   background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
+  /*border-bottom: 2px solid #5fbae9;*/
+  border-bottom: 2px solid rgb(141, 150, 18);
 }
 
 input[type=text]:placeholder,input[type=password]:placeholder, select[type=text] {
@@ -397,36 +349,17 @@ select
       
           <!-- Remind Passowrd -->
           <div id="formFooter">
-            <a class="underlineHover" href="#">Forgot Password?</a>
+            <a class="underlineHover" href="AdminPortalRegistrationPage.html">No account? Register</a> 
+            <br>
+            <a class="underlineHover" href="#">Forgot Password?</a> 
+           
+            
           </div>
       
 
         </div>
       </div>
 
-<!-- <h1 style = "text-align:center; color:black; font-size:290%">Admin Portal</h1>
-<center><img src ="AdminPortalImage.jpg" alt="Admin Portal" width="500" height="400"></center>
-<center> <p style="font-size:200%;">Current company employees with one of the five Admin roles below may sign in<center> </p>
-<center><p style="font-size:200%;">1): Admin</p> <center>
-<p style="font-size:200%;"> 2): Finance Admin</p> <center>
-<p style="font-size:200%;"> 3): Sales Admin</p> <center>
-<p style="font-size:200%;"> 4): Human Resource Admin</p> <center>
-<p style="font-size:200%;"> 5): Engineering Admin</p> <center>
-<p align="center" style="font-size:240%;">In order to proceed, please enter your username and password below</p> 
-<h1 align="center">Current Users</h1>
-<form name ="loginForm" action= "/action_page.php" target="_blank" >
-<input type="text" name="Username" placeholder="Username" size="25"maxlength="30" /></p>
-<input type="password" name="Password" placeholder="Password" size="25"maxlength="30" /></p>
-<select id="AdminRoleType">
-<option value="Select">Select</option>
-<option value="Admin">Admin</option>
-<option value="Finance Admin">Finance Admin</option>
-<option value="Sales Admin">Sales Admin</option>
-<option value="Human Resource Admin">Human Resource Admin</option>
-<option value="Engineering Admin">Engineering Admin</option>
-</select>
-<p align="center" style="font-size:200%;"><input type="button" onclick="return LoginRequirement()" class="button" value="Login" style="font-size:100%;"/></p>
- -->
 
 </form>
 </body>
