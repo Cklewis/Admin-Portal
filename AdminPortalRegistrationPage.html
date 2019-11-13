@@ -3,432 +3,166 @@
 <html>
 
 <head>
-  
-<title>Registration Page</title> 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+  <title>Registration Page</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 
-    $(function(){
-      $.validator.setDefaults({
-        highlight: function(element){
-          $(element)
-          .closest('.form-group')
-          .addClass('has-error')
-        },
-        unhighlight: function(element){
-          $(element)
-          .closest('.form-group')
-          .removeClass('has-error')
-        }
-      });
-      
-      $.validate({
-        rules:
-        {	
-            password: "required",
-          birthDate: "required",
-          weight: {
-              required:true,
-              number:true
-          },
-          height:  {
-              required:true,
-              number:true
-          },
-          email: {
-            required: true,
-            email: true
-          }
-        },
-          messages:{			
-            email: {
-            required: true,
-            email: true
-          }
-        },
-            password: {
-              required: " Please enter password"
-            },
-            birthDate: {
-              required: " Please enter birthdate"
-            },
-            email: {
-              required: ' Please enter email',
-              email: ' Please enter valid email'
-            },
-            weight: {
-              required: " Please enter your weight",
-              number: " Only numbers allowed"
-            },
-            height: {
-              required: " Please enter your height",
-              number: " Only numbers allowed"
-            },
-          }
-          
-    );})
+  <script>
 
-
-/*
-function RegistrationRequirement()
-
-{
-
-  var firstname = document.forms["registerform"]["FirstName"].value;
-
-  var lastname = document.forms["registerform"]["LastName"].value;
-
-  var emailaddress = document.forms["registerform"]["EmailAddress"].value;
-
-  var username = document.forms["registerform"]["Username"].value;
-
-  var password = document.forms["registerform"]["Password"].value;
-
-  var confirmpassword = document.forms["registerform"]["ConfirmPassword"].value;
-
-
-
-  if (firstname == "" || lastname == "" || emailaddress == "" || username == "" || password == "" || confirmpassword == "")
-
-  {
-
-    alert("One or more fields left blank");
-
-    return false;
-
-  }
-
-  
-
-  if(username.length < 5)
-
-  {
-
-    alert("Username must be at least 5 characters long, Please Try Again");
-
-  }
-
-
-
-  if(username.length > 25)
-
-  {
-
-    alert("Username cannot exceed more than 25 characters, Please Try Again");
-
-  }
-
-
-
-  if(password.length <8 && confirmpassword.length < 8)
-
-  {
-
-    alert("Password must be at least 8 characters long, Please Try Again");
-
-  }
-
-  if(password.length > 25 && confirmpassword.length > 25)
-
-  {
-
-    alert("Password cannot exceed more than 25 characters, Please Try Again");
-
-  }
-
-  if (password!=confirmpassword)
-
-  {
-
-    alert("Passwords do not match");
-
-  }
-
-}*/
-
-
-</script>
+  </script>
 
 </head>
 
 
 
 <style>
-  
-/*
-body
+  body {
+    background-color: rgb(141, 150, 18);
+    background-size: cover;
+  }
 
-{
+  *[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 0.3em;
+    background-color: #f2f2f2;
+  }
 
-   background-color: rgb(141, 150, 18);
+  *[role="form"] h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 
-}
+  }
 
+ #AdminRoleType{
+    padding: 6px;
+    margin: 0 auto;
+    border-radius: 0.3em;
+    width: 100%;
+  }
 
-
-input[type=text], select {
-
-  width: 15%;
-
-  padding: 12px 20px;
-
-  margin: 8px 0;
-
-  display: inline-block;
-
-  border: 1px solid #ccc;
-
-  border-radius: 4px;
-
-  box-sizing: border-box;
-
-}
-
-
-
-input[type=password], select {
-
-  width: 15%;
-
-  padding: 12px 20px;
-
-  margin: 8px 0;
-
-  display: inline-block;
-
-  border: 1px solid #ccc;
-
-  border-radius: 4px;
-
-  box-sizing: border-box;
-
-}
-
-
-
-input[type=email], select {
-
-  width: 15%;
-
-  padding: 12px 20px;
-
-  margin: 8px 0;
-
-  display: inline-block;
-
-  border: 1px solid #ccc;
-
-  border-radius: 4px;
-
-  box-sizing: border-box;
-
-}
-
-
-
-input
-
-{
-
-  font-size: 25px;
-
-  
-
-}
-
-
-
-.button {
-
-  background-color: blue;
-
-  border: none;
-
-  color: white;
-
-  padding: 15px 32px;
-
-  text-align: center;
-
+  a{
+  color: #006666;
+  display:inline-block;
   text-decoration: none;
-
-  display: inline-block;
-
+  font-weight: 400;
   font-size: 16px;
+  font-style: bold;
+  }
 
-  margin: 4px 2px;
+  /*removing previous border outlines*/
+  input[type=text]:focus, input[type=password]:focus,input[type=email]:focus, select[type=text]:focus{
+    background-color: #fff;
+    border:none;
+    outline:none;
+  } 
+ 
+  input[type=text]:focus, input[type=password]:focus,input[type=email]:focus, select[type=text]:focus{
+    border: 2px solid rgb(141, 150, 18);
+  } 
 
-  cursor: pointer;
+  input[type=button]:hover, button[type=submit]:hover, input[type=reset]:hover {
+    /*background-color: #39ace7;*/
+    background-color: rgb(219, 38, 6);
+  }
 
-}
+  button[type=submit]{
+    background-color:rgb(141, 150, 18);
+    margin-bottom: 12px;
+    padding:15px;
+  }
 
-
-
-select
-
-{
-
-    font-size: 25px;
-
-}*/
-body {
- background-color:rgb(141, 150, 18);
- background-size: cover;
-}
-
-*[role="form"] {
- max-width: 530px;
- padding: 15px;
- margin: 0 auto;
- border-radius: 0.3em;
- background-color: #f2f2f2;
-}
-
-*[role="form"] h2 { 
- font-family: 'Open Sans' , sans-serif;
- font-size: 40px;
- font-weight: 600;
- color: #000000;
- margin-top: 5%;
- text-align: center;
- text-transform: uppercase;
- letter-spacing: 4px;
-}
 </style>
 
 
 
 <body>
 
-    <div class="container">
-        <form class="form-horizontal" role="form">
-            <h2>Registration</h2>
-            <div class="form-group">
-                <label for="firstName" class="col-sm-3 control-label">First Name*</label>
-                <div class="col-sm-9">
-                    <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus required="true">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="lastName" class="col-sm-3 control-label">Last Name*</label>
-                <div class="col-sm-9">
-                    <input type="text" id="lastName" placeholder="Last Name" class="form-control" autofocus required="true">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="email" class="col-sm-3 control-label">Email* </label>
-                <div class="col-sm-9">
-                    <input type="email" id="email" placeholder="Email" class="form-control" name= "email" required="true">
-                </div>
-            </div>
+  <div class="container">
+    <form class="form-horizontal" role="form">
+      <h2>Registration</h2>
+      <div class="form-group">
+        <label for="firstName" class="col-sm-3 control-label">First Name*</label>
+        <div class="col-sm-9">
+          <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus required="true">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastName" class="col-sm-3 control-label">Last Name*</label>
+        <div class="col-sm-9">
+          <input type="text" id="lastName" placeholder="Last Name" class="form-control" autofocus required="true">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-3 control-label">Email* </label>
+        <div class="col-sm-9">
+          <input type="email" id="email" placeholder="Email" class="form-control" name="email" required="true">
+        </div>
+      </div>
 
-            <div class="form-group">
-                <label for="userName" class="col-sm-3 control-label">UserName*</label>
-                <div class="col-sm-9">
-                    <input type="text" id="userName" placeholder="Username" class="form-control">
-                </div>
-            </div>
+      <div class="form-group">
+        <label for="userName" class="col-sm-3 control-label">UserName*</label>
+        <div class="col-sm-9">
+          <input type="text" id="userName" placeholder="Username" class="form-control" required="true">
+        </div>
+      </div>
 
-            <div class="form-group">
-                <label for="password" class="col-sm-3 control-label">Password*</label>
-                <div class="col-sm-9">
-                    <input type="password" id="password" placeholder="Password" class="form-control">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="password" class="col-sm-3 control-label">Confirm Password*</label>
-                <div class="col-sm-9">
-                    <input type="password" id="password" placeholder="Password" class="form-control">
-                </div>
-            </div>
-            <div class="form-group">
-                    <label for="adminRole" class="col-sm-3 control-label">Admin Role* </label>
-                <div class="col-sm-9">
-                    <select name = "Admin Role Type">
-                        <option value="Select">Select</option>
+      <div class="form-group">
+        <label for="password" class="col-sm-3 control-label">Password*</label>
+        <div class="col-sm-9">
+          <input type="password" id="password" placeholder="Password" class="form-control" required="true">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="col-sm-3 control-label">Confirm Password*</label>
+        <div class="col-sm-9">
+          <input type="password" id="password" placeholder="Password" class="form-control" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="adminRole" class="col-sm-3 control-label">Admin Role* </label>
+        <div class="col-sm-9">
+          <select type="text" id="AdminRoleType" required>
+            <option selected disabled value="">Select</option>
 
-                        <option value="Admin">Admin</option>
-                        
-                        <option value="Finance Admin">Finance Admin</option>
-                        
-                        <option value="Sales Admin">Sales Admin</option>
-                        
-                        <option value="Human Resource Admin">Human Resource Admin</option>
-                        
-                        <option value="Engineering Admin">Engineering Admin</option>
-                    </select> 
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <div class="col-sm-9 col-sm-offset-3">
-                    <span class="help-block">*Required fields</span>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
-        </form> <!-- /form -->
-    </div> <!-- ./container -->
-<!-- <h1 align="center">Create New Account</h1>
+            <option value="Admin">Admin</option>
 
-<form name ="registerform" action= "/action_page.php" target="_self">
+            <option value="Finance Admin">Finance Admin</option>
 
-<p align="center" style="font-size:200%; color:black;">*First Name:<input type="text" name="FirstName" placeholder="*First Name" size="25"maxlength="100" /></p>
+            <option value="Sales Admin">Sales Admin</option>
 
-<p align="center" style="font-size:200%; color:black;">*Last Name:<input type="text" name="LastName" placeholder="*Last Name" size="25"maxlength="100" /></p>
+            <option value="Human Resource Admin">Human Resource Admin</option>
 
-<p align="center" style="font-size:200%; color:black;">*Email Address:<input type="email" name="EmailAddress" placeholder="*Email Address" size="25"maxlength="100" /></p>
+            <option value="Engineering Admin">Engineering Admin</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-9 col-sm-offset-3">
+          <span class="help-block">*Required fields</span>
+        </div>
 
-<p align="center" style="font-size:200%; color:black;">*Username:<input type="text" name="Username" placeholder="*Username" size="25"maxlength="30" /></p>
+        <div class="col-sm-9 col-sm-offset-3">
+            <a class="login" href="AdminPortalLogin.html">Have an account? Login</a>
+          </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Register</button>
 
-<p align="center" style="font-size:200%; color:black;">*Password:<input type="password" name="Password" placeholder="*Password" size="25"maxlength="30" /></p>
-
-<p align="center" style="font-size:200%; color:black;">*Confirm Password:<input type="password" name="ConfirmPassword" placeholder="*Confirm Password" size="25"maxlength="30" /></p>
-
-<p align="center" style="font-size:200%; color:black;">*Admin Role Type
-
-<select name="Admin Role Type">
-
-<option value="Select">Select</option>
-
-<option value="Admin">Admin</option>
-
-<option value="Finance Admin">Finance Admin</option>
-
-<option value="Sales Admin">Sales Admin</option>
-
-<option value="Human Resource Admin">Human Resource Admin</option>
-
-<option value="Engineering Admin">Engineering Admin</option>
-
-</select>
-
-
-
-<p align="center" style="font-size:200%;"><input type="button" onclick="return RegistrationRequirement()" class="button" value="Sign Up" style="font-size:100%;"/></p>
-
-</p>
-
-
-
-<hr />
-
-
-
-<p align="left" style="font-size:200%; color:black;">*field must not be left blank</p> 
-
-
-
-<center><a href="AdminPortalLogin.html" style=font-size:200%;>Already have an account? Click here to be redirected to the sign in page</a></center>
- 
-</form>-->
-
+    </form> <!-- /form -->
+  </div> <!-- ./container -->
 
 </body>
 

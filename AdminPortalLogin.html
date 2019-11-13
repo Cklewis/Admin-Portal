@@ -49,7 +49,7 @@ body {
 }
 
 a {
-  color: #92badd;
+  color: #006666;
   display:inline-block;
   text-decoration: none;
   font-weight: 400;
@@ -114,7 +114,7 @@ h2.inactive {
 
 h2.active {
   color: #0d0d0d;
-  border-bottom: 2px solid #5fbae9;
+  border-bottom: 2px solid #212521;
 }
 
 
@@ -290,7 +290,7 @@ select
   bottom: -10px;
   width: 0;
   height: 2px;
-  background-color: #56baed;
+  
   content: "";
   transition: width 0.2s;
 }
@@ -326,17 +326,14 @@ select
         <div id="formContent">
           <!-- Tabs Titles -->
           
-          <!-- Icon -->
-          <!-- <div class="fadeIn first">
-            <img src="AdminPortalImage.jpg" id="icon" alt="User Icon" />
-          </div> -->
           <br>
-          <h1 id="ap" style = "text-align:center; color:black; font-size:290%; font-family:Georgia">Admin Portal</h1>
+          <h1 id="ap" style = "text-align:center; color:black; font-size:290%; font-family:Georgia"
+          class="fadeIn first">Admin Portal</h1>
           <!-- Login Form -->
           <form onsubmit='makePath(this);'>
             <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" required>
             <input type="password" id="password" class="fadeIn third"  name="login" placeholder="password" required>
-            <select type="text" id="AdminRoleType" required>
+            <select type="text" id="AdminRoleType" class="fadeIn fourth" required>
                 <option  selected disabled value="">Select</option> 
                 <option value= "Adminlink.html">Admin</option>
                 <option value="FinanceAdminLink.html">Finance Admin</option>
@@ -348,10 +345,11 @@ select
           </form>
       
           <!-- Remind Passowrd -->
-          <div id="formFooter">
+          <div id="formFooter"class="fadeIn fourth">
             <a class="underlineHover" href="AdminPortalRegistrationPage.html">No account? Register</a> 
             <br>
-            <a class="underlineHover" href="#">Forgot Password?</a> 
+            <!-- <hr>
+            <a class="underlineHover" href="#">Forgot Password?</a>  -->
            
             
           </div>
