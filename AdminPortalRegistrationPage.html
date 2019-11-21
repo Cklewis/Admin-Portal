@@ -5,14 +5,14 @@
 <head>
 
   <title>Registration Page</title>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
   <script>
 /*Javascript code goes here*/
 
@@ -114,85 +114,93 @@
 </style>
 
 <body>
-
   <div class="container">
-    <form class="form-horizontal" role="form">
-      <h2>Registration</h2>
-      <br>
-      <div class="form-group">
-        <label for="firstName" class="col-sm-3 control-label">First Name</label>
-        <div class="col-sm-9">
-          <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus required="true">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="lastName" class="col-sm-3 control-label">Last Name</label>
-        <div class="col-sm-9">
-          <input type="text" id="lastName" placeholder="Last Name" class="form-control" autofocus required="true">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="email" class="col-sm-3 control-label">Email </label>
-        <div class="col-sm-9">
-          <input type="email" id="email" placeholder="Email" class="form-control" name="email" required="true">
-        </div>
-      </div>
+    <div class="row">
+    	<div class="mx-auto col-sm-6">
+    		<div class="card text-center">
+    			<div class="card-body">
+    				<form>
+				      <h2>Registration</h2>
+				      <br>
+				      <div class="form-group row">
+				        <label for="firstName" class="col-sm-3 control-label">First Name</label>
+				        <div class="col-sm-9">
+				          <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus required="true">
+				        </div>
+				      </div>
+				      <div class="form-group row">
+				        <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+				        <div class="col-sm-9">
+				          <input type="text" id="lastName" placeholder="Last Name" class="form-control" autofocus required="true">
+				        </div>
+				      </div>
+				      <div class="form-group row">
+				        <label for="email" class="col-sm-3 control-label">Email</label>
+				        <div class="col-sm-9">
+				          <input type="email" id="email" placeholder="Email" class="form-control" name="email" required="true">
+				        </div>
+				      </div>
 
-      <div class="form-group">
-        <label for="userName" class="col-sm-3 control-label">UserName</label>
-        <div class="col-sm-9">
-          <input type="text" id="userName" placeholder="Username" class="form-control" required="true">
-        </div>
-      </div>
+				      <div class="form-group row">
+				        <label for="userName" class="col-sm-3 control-label">Username</label>
+				        <div class="col-sm-9">
+				          <input type="text" id="username" placeholder="Username" class="form-control" required="true">
+				        </div>
+				      </div>
 
-      <div class="form-group">
-        <label for="password" class="col-sm-3 control-label">Password</label>
-        <div class="col-sm-9">
-          <input type="password" id="password" placeholder="Password" class="form-control" required="true">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="password" class="col-sm-3 control-label">Confirm Password</label>
-        <div class="col-sm-9">
-          <input type="password" id="password" placeholder="Password" class="form-control" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="adminRole" class="col-sm-3 control-label">Admin Role </label>
-        <div class="col-sm-9">
-          <select type="text" id="AdminRoleType" required>
-            <option selected disabled value="">Select</option>
+				      <div class="form-group row">
+				        <label for="password" class="col-sm-3 control-label">Password</label>
+				        <div class="col-sm-9">
+				          <input type="password" id="password" placeholder="Password" class="form-control" required="true">
+				        </div>
+				      </div>
 
-            <option value="Admin">Admin</option>
+				      <div class="form-group row">
+				        <label for="password" class="col-sm-3 control-label">Confirm Password</label>
+				        <div class="col-sm-9">
+				          <input type="password" id="password" placeholder="Confirm Password" class="form-control" required="true"
+				          >
+				      	</div>
+				      </div>
 
-            <option value="Finance Admin">Finance Admin</option>
+				      <div class="form-group row">
+				        <label for="adminRole" class="col-sm-3 control-label">Admin Role</label>
+				        <div class="col-sm-9">
+				          <select type="text" id="AdminRoleType" required>
+				            <option selected disabled value="">Select</option>
 
-            <option value="Sales Admin">Sales Admin</option>
+				            <option value="Admin">Admin</option>
 
-            <option value="Human Resource Admin">Human Resource Admin</option>
+				            <option value="Finance Admin">Finance Admin</option>
 
-            <option value="Engineering Admin">Engineering Admin</option>
-          </select>
-        </div>
-      </div>
+				            <option value="Sales Admin">Sales Admin</option>
 
-      <div class="form-group">
-        <div class="col-sm-9 col-sm-offset-3">
-          <span class="help-block">*All fields required</span>
-        </div>
-      </div>
+				            <option value="Human Resource Admin">Human Resource Admin</option>
 
-      <div>
-        <button type="submit" class="btn btn-primary btn-block">REGISTER</button>
-      </div>
-      <br>
-      
-      <div class="form-footer">
-        <a class="login" href="AdminPortalLogin.html">Have an account? Login</a>
-      </div>
+				            <option value="Engineering Admin">Engineering Admin</option>
+				          </select>
+				        </div>
+				      </div>
 
-  </div>
-  </form> <!-- /form -->
+				      <div class="form-group">
+				        <div class="col-sm-9 col-sm-offset-3">
+				          <span class="help-block">*All fields required</span>
+				        </div>
+				      </div>
+
+				      <div>
+				        <button type="submit" class="btn btn-primary btn-block">Register</button>
+				      </div>
+				      <br>
+				      
+				      <div class="form-footer">
+				        <a class="login" href="AdminPortalLogin.html">Have an account? Login</a>
+				      </div>
+				    </form>
+			    </div> <!-- ./card-body -->
+		    </div> <!-- ./card -->
+	    </div> <!-- ./col -->
+  	</div> <!-- ./row -->
   </div> <!-- ./container -->
 </body>
 
