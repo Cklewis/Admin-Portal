@@ -48,6 +48,7 @@
 
   *:focus {
     outline: none;
+    border:none;
   }
 
   #AdminRoleType {
@@ -57,12 +58,11 @@
     width: 100%;
   }
 
-  /*
+  
   .form-footer {
     background-color: #fff;
-    border-top: 1px solid #dce8f1;
-    padding:15px;
-  }*/
+    margin-bottom:-30px;
+  }
 
   a {
     color: rgb(39, 139, 179);
@@ -79,6 +79,7 @@
   a:hover {
     color: rgb(20, 20, 20);
   }
+  
 
   /*removing previous border outlines*/
   input[type=text]:focus,
@@ -90,17 +91,17 @@
     outline: none;
   }
 
+ 
   input[type=text]:focus,
   input[type=password]:focus,
   input[type=email]:focus,
   select[type=text]:focus {
-    border: 2px solid rgb(141, 150, 18);
-  }
+    border-bottom: 2px solid rgb(141, 150, 18);
+  }*
 
-  /*input[type=button]:hover,
+  input[type=button]:hover,
   button[type=submit]:hover,
   input[type=reset]:hover {
-
     background-color: rgb(219, 38, 6);
   }
 
@@ -109,7 +110,31 @@
     padding: 16px;
     width:250px;
     margin:auto;
-  }*/
+  }
+
+  textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color:rgb(141, 150, 18);
+  border-left-color: rgba(255, 255, 255, 0.575);
+  border-right-color:rgba(255, 255, 255, 0.575);
+  border-top-color:rgba(255, 255, 255, 0.575);
+  box-shadow: 0 1px 4px 0 rgba(95,186,233,0.4);
+  outline: 0 none;
+}
 
 </style>
 
@@ -190,8 +215,9 @@
 				      
 				      <button type="submit" class="btn btn-primary btn-md">Register</button>
 				      
-				      <br>
-				      
+              <br>
+              <hr>
+				    
 				      <div class="form-footer">
 				        <a class="login" href="AdminPortalLogin.html">Have an account? Login</a>
 				      </div>
