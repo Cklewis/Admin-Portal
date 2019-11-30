@@ -7,9 +7,11 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-            <ul class="nav navbar-right top-nav">
-                <a href="login.php" class="navbar-brand">
-                    Login
-                </a>
-            </ul>
+            <div class="collapse navbar-collapse" id="navBarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    <a href=login.php class="nav-link">Login</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
