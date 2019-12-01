@@ -13,18 +13,21 @@
                                 <div class="form-group row">
                                     <label for="userName" class="col-sm-3 control-label">Username</label>
                                     <div class="col-sm-9">
-                                    <input type="text" id="username" placeholder="Username" class="form-control" required="true">
+                                        <input type="text" id="username" placeholder="Username" class="form-control" required="true">
                                     </div>
                                 </div>
                                 
                                 <div class="form-group row">
                                     <label for="password" class="col-sm-3 control-label">Password</label>
                                     <div class="col-sm-9">
-                                    <input type="password" id="password" placeholder="Password" class="form-control" required="true">
+                                        <input type="password" id="password" placeholder="Password" class="form-control" required="true">
                                     </div>
                                 </div>
                                 
-                                <button type="submit" class="btn btn-primary btn-md">Login</button>
+                                <div class="form-group">
+
+									<input name="login" class="btn btn-primary btn-md" value="Login" type="submit">
+								</div>
                                 
                                 <br>
                                 <hr>
