@@ -1,5 +1,8 @@
+<?php session_start(); ?>
+<?php include "functions.php"; ?>
+<?php ob_clean(); ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
