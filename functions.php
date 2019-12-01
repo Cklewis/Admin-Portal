@@ -1,4 +1,4 @@
-<? php
+<?php
 
 function redirect($location){
 
@@ -8,13 +8,34 @@ function redirect($location){
 
 }
 
+function ifItIsMethod($method=null){
+
+    if($_SERVER['REQUEST_METHOD'] == strtoupper($method)){
+
+        return true;
+
+    }
+
+    return false;
+
+}
+
+function checkIfUserIsLoggedInAndRedirect($redirectLocation=null){
+
+    if(isLoggedIn()){
+
+        redirect($redirectLocation);
+
+    }
+
+}
+
 function escape($string) {
 
     global $connection;
     
     return mysqli_real_escape_string($connection, trim($string));
-    
-    
+       
 }
 
 function confirmQuery($result) {

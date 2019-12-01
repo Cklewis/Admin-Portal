@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?php include "functions.php"; ?>
-<?php ob_clean(); ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
