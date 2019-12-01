@@ -101,12 +101,10 @@ function register_user($firstname,$lastname,$username, $email, $password, $admin
     $password = mysqli_real_escape_string($connection, $password);
 
     $password = password_hash( $password, PASSWORD_BCRYPT, array('cost' => 12));
-
-    $adminrole   = mysqli_real_escape_string($connection, $adminrole);
             
             
-    $query = "INSERT INTO users (username, user_password, user_firstname, user_lastname, user_email, user_admintype) ";
-    $query .= "VALUES('{$username}','{$password}', '{$firstname}','{$lastname}', '{$email}', '{$adminrole}' )";
+    $query = "INSERT INTO users (username, user_password, user_firstname, user_lastname, user_email) ";
+    $query .= "VALUES('{$username}','{$password}', '{$firstname}','{$lastname}', '{$email}' )";
     $register_user_query = mysqli_query($connection, $query);
 
     confirmQuery($register_user_query);

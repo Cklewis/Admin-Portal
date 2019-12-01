@@ -9,7 +9,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 	$username = trim($_POST['username']);
 	$password = trim($_POST['password']);
 	$email    = trim($_POST['email']);
-	$adminrole = trim($_POST['adminrole']);
 
 
     $error = [
@@ -18,8 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 		'lastname' => '',
 		'email'=>'',
 		'username'=> '',
-		'password'=>'',
-		'adminrole' => ''
+		'password'=>''
 
 	];
 	
@@ -84,7 +82,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
     if(empty($error)){
 
-        register_user($firstname,$lastname,$username, $email, $password, $adminrole);
+        register_user($firstname,$lastname,$username, $email, $password);
 
         login_user($username, $password);
 
@@ -168,14 +166,21 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 								</div>
 
 								<div class="form-group row">
-									<label for="adminrole" class="col-sm-3 control-label">Admin Role</label>
+									<label for="adminRole" class="col-sm-3 control-label">Admin Role</label>
 									<div class="col-sm-9">
-										<select name="adminrole">
-											<option selected disabled value="">Select</option>
+									<select type="text" id="admintype" required>
+										<option selected disabled value="">Select</option>
 
-											<option value="<?php echo isset($adminrole) ? $adminerole : '' ?>"><?php echo $adminrole; ?></option>
+										<option value="Admin">Admin</option>
 
-										</select>
+										<option value="Finance Admin">Finance Admin</option>
+
+										<option value="Sales Admin">Sales Admin</option>
+
+										<option value="Human Resource Admin">Human Resource Admin</option>
+
+										<option value="Engineering Admin">Engineering Admin</option>
+									</select>
 									</div>
 								</div>
 
