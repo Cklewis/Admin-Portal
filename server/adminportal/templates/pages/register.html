@@ -4,9 +4,9 @@
     <div class="container home-inner w-25">
       <div class="card bg-primary text-center text-light card-form">
         <div class="card-body">
-            <br>
-          <h3>Sign Up Today</h3>
-          <p>Get access to our pricing database</p>
+          <br>
+          <h3>Register For an Account</h3>
+          <p>See what links you can access</p>
           {% load crispy_forms_tags %}
           <form method="POST">
             {% csrf_token %}
@@ -27,9 +27,8 @@
             </button>
           </form>
           <p class="mt-4">
-            Already a member?<a href="{% url 'login' %}" class="text-light">
-              Log in Here</a
-            >
+            Already have an account?<a href="{% url 'login' %}" class="text-light">
+              Log in Here</a>
           </p>
         </div>
       </div>

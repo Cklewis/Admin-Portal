@@ -5,7 +5,7 @@ from .models import Link
 
 def link(request):
   if request.user.is_authenticated:
-    my_ls = FuelQuote.objects.filter(user=request.user)
+    my_ls = Link.objects.filter(user=request.user)
     context = {'object_list': my_ls}
     return render(request, 'pages/links.html', context)
   else:
