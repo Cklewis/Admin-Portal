@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block content %}
+{% if user.is_authenticated %}
+<section id="links" class="bg-primary">
+  <h3>Here are your links,</h3>
+  <div class="row">
+    <div class="col-md-10 m-5 mx-auto">
+      <div class="card bg-info">
+        <div class="card-body">
+          <table class="table text-light">
+            <thead>
+              <tr>
+                <th scope="col">Links</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for object in object_list %}
+              <tr>
+                <td scope="row">{{ object.link_address }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% else %}
+<section id="links" class="bg-primary">
+  <div class="row">
+    <div class="col-lg-10 m-5 mx-auto">
+      <div class="col-lg-10 m-5 mx-auto">
+        <div class="card bg-info text-center p-4">
+          <p class="lead text-light"><a href="{% url 'login' %}" class="text-light">
+            Please log in here to view your quote history.</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endblock content %}
