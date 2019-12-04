@@ -2,10 +2,10 @@
 {% if user.is_authenticated %}
 <section id="links" class="bg-primary">
   <br>
-  <h3 class="text-center">You are {{user.admintype}} admin and Here are your links</h3>
+  <h3 class="text-center">You are a {{user.admin_type}} admin. Here are your links,</h3>
   <div class="row">
     <div class="col-md-10 m-5 mx-auto">
-      <div class="card bg-info">
+      <div class="card bg-dark">
         <div class="card-body">
           <table class="table text-light">
             <thead>
@@ -16,7 +16,8 @@
             <tbody>
               {% for object in object_list %}
               <tr>
-                <td scope="row">{{ object.link_address }}</td>
+                <td class="text-center" scope="row">
+                  <a href="{{ object.link_address }}">{{ object.link_address }}</a></td>
               </tr>
               {% endfor %}
             </tbody>
