@@ -10,6 +10,7 @@ class UserModelCreationlTest(TestCase):
       username='test_user',
       full_name='John Smith',
       email='johnsmith@yahoo.com',
+      admin_type='Global'
     )
 
   def test_user_fields(self):
@@ -17,7 +18,9 @@ class UserModelCreationlTest(TestCase):
     expected_user_name = f'{user.username}'
     expected_full_name = f'{user.full_name}'
     expected_email = f'{user.email}'
+    expected_admin_type = f'{user.admin_type}'
     self.assertEqual(expected_user_name, 'test_user')
     self.assertEqual(expected_full_name, 'John Smith')
     self.assertEqual(expected_email, 'johnsmith@yahoo.com')
+    self.assertEqual(expected_admin_type, 'Global')
     
