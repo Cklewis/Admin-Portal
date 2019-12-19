@@ -19,6 +19,14 @@
             <div class="form-group">
               {{ form.email | as_crispy_field }}
             </div>
+            <h6>
+              Make sure your password contains the following:
+              <li>At least 6 characters long</li>
+              <li>the use of both upper-case and lower-case letters (case sensitivity)</li>
+              <li>inclusion of one or more numerical digits</li>
+              <li>inclusion of special characters, such as @, #, $</li> 
+              <li>prohibition of words found in the user's personal information</li>
+            </h6>
             <div class="form-group">
               {{ form.password1 | as_crispy_field }}
             </div>
