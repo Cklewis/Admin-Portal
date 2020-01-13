@@ -1,0 +1,4 @@
+cd server
+.\env\Scripts\activate
+cd adminportal
+python manage.py runserver
